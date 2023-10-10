@@ -1,5 +1,5 @@
 ### Yipada
-Perfom conversions between ASCII, decimal, hexadecimal, octal, and binary values
+Perform conversions between ASCII, decimal, hexadecimal, octal, and binary values
 
 ### Install
 go install github.com/mukailasam/yipada@latest

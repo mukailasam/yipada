@@ -1,14 +1,14 @@
-### Yipada
+# Yipada
 
 Perform conversions between ASCII, decimal, hexadecimal, octal, and binary values
 
-### Install
+# Install
 
 go install github.com/mukailasam/yipada@latest
 
-### Basic Usage
+# Basic Usage
 
-#### Decimal Conversion
+### Decimal Conversion
 
 Decimal to binary
 `yipada -db 10`
@@ -22,7 +22,7 @@ Decimal to ASCII
 Decimal to octal
 `yipada -do 10`
 
-#### Binary Conversion
+### Binary Conversion
 
 Binary to decimal
 `yipada -bd 1010`
@@ -36,7 +36,7 @@ Binary to ASCII
 Binary to octal
 `yipada -bo 1010`
 
-#### Hexadecimal Conversion
+### Hexadecimal Conversion
 
 Hexadecimal to decimal
 `yipada -hd a`
@@ -50,7 +50,7 @@ Hexadecimal to ASCII
 Hexadecimal to octal
 `yipada -ho a`
 
-#### ASCII Conversion
+### ASCII Conversion
 
 ASCII to decimal
 `yipada -ad A`
@@ -64,7 +64,7 @@ ASCII to hexadecimal
 ASCII to octal
 `yipada -ao A`
 
-#### Octal Conversion
+### Octal Conversion
 
 Octal to decimal
 `yipada -od 12`
@@ -87,4 +87,4 @@ e.g
 yidapa -ba "1101110 10110 1101001 110001"
 ```
 
-Except for hex operation
+Except for hex operations

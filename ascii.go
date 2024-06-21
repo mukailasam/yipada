@@ -40,7 +40,7 @@ func ascii2Hex(ascii *string) {
 	fmt.Printf("Hexadecimal: ")
 	for _, v := range newASCII {
 		for _, v := range v {
-			fmt.Printf("%x ", v)
+			fmt.Printf("%x", v)
 		}
 	}
 

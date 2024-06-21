@@ -1,87 +1,40 @@
 package main
 
 import (
+	"encoding/hex"
 	"fmt"
+	"log"
 	"strconv"
-	"strings"
 )
 
-func hex2Binary(hex *string) {
-	newHex := strings.Split(*hex, " ")
-
-	output := make([]int64, 0)
-	for _, nv := range newHex {
-		nd, err := strconv.ParseInt(nv, 16, 64)
-		if err != nil {
-			fmt.Println(badInputError)
-			return
-		}
-
-		output = append(output, nd)
+func hex2Binary(h *string) {
+	output, err := strconv.ParseInt(*h, 16, 64)
+	if err != nil {
+		log.Fatalln(badInputError)
 	}
-
-	fmt.Printf("Binary: ")
-	for _, val := range output {
-		fmt.Printf("%b ", val)
-	}
+	fmt.Printf("Binary: %b", output)
 }
 
-func hex2Octal(hex *string) {
-	newHex := strings.Split(*hex, " ")
-
-	output := make([]int64, 0)
-	for _, nv := range newHex {
-		nd, err := strconv.ParseInt(nv, 16, 64)
-		if err != nil {
-			fmt.Println(badInputError)
-			return
-		}
-
-		output = append(output, nd)
+func hex2Octal(h *string) {
+	output, err := strconv.ParseInt(*h, 16, 64)
+	if err != nil {
+		log.Fatalln(badInputError)
 	}
-
-	fmt.Printf("Octal: ")
-	for _, val := range output {
-		fmt.Printf("%o ", val)
-	}
+	fmt.Printf("Octal: %o", output)
 }
 
-func hex2ASCII(hex *string) {
-	newHex := strings.Split(*hex, " ")
-
-	output := make([]int64, 0)
-	for _, nv := range newHex {
-		nd, err := strconv.ParseInt(nv, 16, 64)
-		if err != nil {
-			fmt.Println(badInputError)
-			return
-		}
-
-		output = append(output, nd)
+func hex2ASCII(h *string) {
+	output, err := hex.DecodeString(*h)
+	if err != nil {
+		log.Fatalln(badInputError)
 	}
-
-	fmt.Printf("ASCII: ")
-	for _, val := range output {
-		fmt.Printf("%c ", val)
-	}
+	fmt.Printf("ASCII: %s", string(output))
 }
 
-func hex2Decimal(hex *string) {
-	newHex := strings.Split(*hex, " ")
-
-	output := make([]int64, 0)
-	for _, nv := range newHex {
-		nd, err := strconv.ParseInt(nv, 16, 64)
-		if err != nil {
-			fmt.Println(badInputError)
-			return
-		}
-
-		output = append(output, nd)
+func hex2Decimal(h *string) {
+	output, err := strconv.ParseInt(*h, 16, 64)
+	if err != nil {
+		log.Fatalln(badInputError)
 	}
-
-	fmt.Printf("Decimal: ")
-	for _, val := range output {
-		fmt.Printf("%d ", val)
-	}
+	fmt.Printf("Decimal: %d", output)
 }
